@@ -1,17 +1,12 @@
 ---
-layout: default
-title: Home
-menu: no
+layout: home
+breadcrumb:
+  -
+    label: Posts
+
+# Index page
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
+# © 2017-2019 Cotes Chung
+# MIT License
 ---
-<h1 class="page-title">Articles</h1>
-<div class="home">
-<div class="post-list">
-{% for post in site.posts %}
-<a style="text-decoration:none"  href="{{ post.url | prepend: site.baseurl }}">
-      {% include post-cards.html %}
-</a>
-{% endfor %}
-</div>
-</div>
-
-

@@ -1,49 +1,63 @@
 ---
 layout: compress
+# Default layout
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
+# © 2017-2019 Cotes Chung
+# MIT Licensed
 ---
 
 <!DOCTYPE html>
-<html>
-{% include head.html %}
 
-<body>
-   <div class="container">
-       
-    {% include sidebar.html %}
+{% if site.lang %}
+  {% assign lang = site.lang | split: "_" | first %}
+{% else %}
+  {% assign lang = 'en' %}
+{% endif %}
 
-    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->   
-        <div id="main">
+{% capture prefer_mode %}
+  {% if site.theme_mode != "dual" %}
+    mode="{{ site.theme_mode }}"
+  {% endif %}
+{% endcapture %}
 
-             {% include header.html %}
-                    <div class="page-content">
-                        <div class="wrapper">
-                            {{ content }}
-                        </div>
-                    {% include footer.html %}
-                    </div>
-                {% if site.analytics %}
-                    {% include analytics.html %}
-                {% endif %}  
-        </div>
-        
-        
-        
-        
-        
-<script>
-    /* Set the width of the side navigation to 250px */
-    function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    }
+<html lang="{{ lang }}" {{ prefer_mode }} >
 
-    /* Set the width of the side navigation to 0 */
-    function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    }
-</script>
-        
-        
-</div>            
-        
-</body>
+  {% include head.html %}
+
+  <body data-spy="scroll" data-target="#toc">
+
+    <div id="sidebar" class="d-flex flex-column">
+      {% include sidebar.html %}
+    </div>
+
+    {% include topbar.html %}
+
+    <div id="main-wrapper">
+      <div id="main">
+
+        {% include refactor-content.html content=content %}
+
+        {% include footer.html %}
+
+      </div>
+
+      {% include search-results.html %}
+
+    </div> <!-- #main-wrapper -->
+
+    <div id="mask"></div>
+
+    <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    {% include search-loader.html %}
+
+    {% if site.google_analytics.id and jekyll.environment == 'production' %}
+      {% include google-analytics.html %}
+    {% endif %}
+
+  </body>
+
 </html>
