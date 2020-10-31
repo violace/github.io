@@ -1,26 +1,29 @@
-Fresh is a free blog template for Jekyll
-=============================
+Bheema is a theme suitabel for image heavy journal kind of websites. 
 
-![](assets/img/fresh.jpg)
+Demo: [http://webjeda.com/ashwath/](http://webjeda.com/ashwath/)
 
-# Demo
 
-![GIF](assets/img/fresh.gif)
+## Installation
+* Fork the repository
+* Go to settings and set Github Pages source as master.
+* Your new site should be ready.
 
-View this jekyll theme in action [here](http://artemsheludko.pw/fresh/)
 
-Integrations
-  - [Google Fonts](https://fonts.google.com/)
-  - [Disqus](https://disqus.com/)
-  - [Font Awesome](http://fontawesome.io/)
-  - Social media links
+## Screenshots
+Default theme:
 
-# How to Use
+![ashwath jekyll theme](http://webjeda.com/ashwath/images/Default.png)
 
-  For those unfamiliar with how Jekyll works, check out [jekyllrb.com](https://jekyllrb.com/) for all the details,
-  or read up on just the basics of [front matter](https://jekyllrb.com/docs/frontmatter/), [writing posts](https://jekyllrb.com/docs/posts/),
-  and [creating pages](https://jekyllrb.com/docs/pages/).
+Color schemes (Full version)
+
+![ashwath jekyll theme](http://webjeda.com/ashwath/images/Purple.png)
+
+![ashwath jekyll theme](http://webjeda.com/ashwath/images/Blood.png)
+
+![ashwath jekyll theme](http://webjeda.com/ashwath/images/Mango.png)
+
+
+For more themes visit - [https://jekyll-themes.com](https://jekyll-themes.com)
 
 ## License
-
-GNU General Public License v3.0
+MIT License
